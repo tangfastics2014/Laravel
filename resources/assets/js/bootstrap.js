@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import axios from 'axios';
 import VueRouter from 'vue-router';
+import Vuex from 'vuex';
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -20,6 +21,7 @@ require('bootstrap-sass');
 
 window.Vue = Vue;
 Vue.use(VueRouter);
+Vue.use(Vuex);
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests

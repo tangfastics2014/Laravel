@@ -16,3 +16,7 @@ Route::get('/', 'HomeController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::group(['namespace' => 'API', 'prefix' => 'api', 'as' => 'api.'], function() {
+    Route::resource('topics', 'TopicsController');
+});

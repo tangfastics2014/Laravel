@@ -1,16 +1,11 @@
 import VueRouter from 'vue-router';
 
-import Home from './components/Home.vue';
-import Example from './components/Example.vue';
+import TopicsIndex from './components/Topics/Index.vue';
 
 let routes = [
     {
         path: '/',
-        component: Home
-    },
-    {
-        path: '/example',
-        component: Example
+        component: TopicsIndex
     }
 ];
 
