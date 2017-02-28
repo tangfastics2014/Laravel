@@ -1,5 +1,6 @@
-
-window._ = require('lodash');
+import Vue from 'vue';
+import axios from 'axios';
+import VueRouter from 'vue-router';
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -17,7 +18,8 @@ require('bootstrap-sass');
  * and simple, leaving you to focus on building your next great project.
  */
 
-window.Vue = require('vue');
+window.Vue = Vue;
+Vue.use(VueRouter);
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -25,7 +27,7 @@ window.Vue = require('vue');
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-window.axios = require('axios');
+window.axios = axios;
 
 window.axios.defaults.headers.common = {
     'X-CSRF-TOKEN': window.Laravel.csrfToken,
