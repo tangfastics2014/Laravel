@@ -7,7 +7,7 @@
 
                     <ul class="list-group">
                         <li class="list-group-item" v-for="topic in topics">
-                            {{ topic.title }}
+                            <router-link :to="{ name: 'topics.show', params: { 'topic': topic.id } }">{{ topic.title }}</router-link>
                         </li>
                     </ul>
                 </div>
